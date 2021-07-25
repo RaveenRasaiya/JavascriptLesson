@@ -1,0 +1,144 @@
+<html>
+  <head>
+    <script type="text/javascript">
+      function onClickIncrease() {
+        // looping
+
+        //for loop 0 to 10;
+        var count = 10;
+        var total = 0;
+        for (
+          var i = 0; // starting point
+          i < count; // exit point
+          i++ // increment
+        ) {
+          console.log(i);
+          total = total + i;
+          document.getElementById("forLoopSpan").innerText = total;
+        }
+
+        // decrease from 10 to 0
+
+        for (var i = count; i > 0; i--) {
+          console.log(i);
+          document.getElementById("forLoopSpan").innerText = total;
+        }
+
+        
+        // operators
+        // priint or display
+        // variable or const
+        
+        // others
+      }
+
+      // while loop
+
+      function whileLoopFunction() {
+        var noOfTimes = 0;
+
+        while (noOfTimes < 5) {
+          document.getElementById("whileLoopSpan").innerHTML += "Door is open " + noOfTimes + "</br>";
+
+          noOfTimes += 1;
+        }
+      }
+
+      // do while loop
+      function doWhileLoopFunction() {
+        var countMe = 0;
+        do {
+          console.log(countMe);
+          document.getElementById("doWhileLoopSpan").innerHTML += "Door is open " + countMe + "</br>";
+          countMe++;
+        } while (countMe < 2);
+      }
+// conditionals
+      function conditionalsOperations(count) {
+        // if(I am in India){
+        //     // I would be a pilot
+        // }
+        // else if(I am in USA){
+        //     // I would be a rapper
+        // }
+        // else{
+        //     // I would be a Programmer
+        // }
+
+        //v-1
+        if (count < 5) {
+          document.getElementById("ifConditionSpan").innerText = "I am less than five";
+        } else if (count > 5 && count % 2 == 1) {
+          document.getElementById("ifConditionSpan").innerText = "I am greater than five";
+        } else {
+          document.getElementById("ifConditionSpan").innerText = "I am not in range";
+        }
+
+        // v-2
+        if (count < 5) {
+          document.getElementById("ifConditionSpan").innerText = "I am less than five";
+        } else {
+          document.getElementById("ifConditionSpan").innerText = "I am not in range";
+        }
+        // v-3
+        if (count < 5) {
+          document.getElementById("ifConditionSpan").innerText = "I am less than five";
+        }
+      }
+// conditionals
+      function conditionalsSwitch(country) {
+        console.log(country);
+        switch (country) {
+          case "India":
+            document.getElementById("swtichConditionSpan").innerText = "I like my " + country + " Briyani";
+            break;
+          case "Australia":
+            document.getElementById("swtichConditionSpan").innerText = "I like my " + country + " BBQ";
+            break;
+          case "USA":
+            document.getElementById("swtichConditionSpan").innerText = "I  like my  " + country + " Pizza";
+            break;
+          default:
+            document.getElementById("swtichConditionSpan").innerText = "I like anything";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div>
+      <span id="forLoopSpan"></span>
+
+      <span id="whileLoopSpan"></span>
+
+      <span id="doWhileLoopSpan"></span>
+
+      <span id="ifConditionSpan"></span>
+
+      <span id="swtichConditionSpan"></span>
+
+      <ul>
+        <!-- <li onclick="onClickButton();"> Profile </li> -->
+        <li>Settings</li>
+        <li>Sign out</li>
+      </ul>
+      <button type="button" onclick="onClickIncrease();">For Loop</button>
+      <button type="button" onclick="whileLoopFunction();">While Loop</button>
+      <button type="button" onclick="doWhileLoopFunction();">Do While Loop</button>
+      <br /><br />
+      <button type="button" onclick="conditionalsOperations(3);">If(3)</button>
+
+      <button type="button" onclick="conditionalsOperations(8);">If(8)</button>
+
+      <button type="button" onclick="conditionalsOperations(7);">Else 7</button>
+
+      <br /><br />
+      <button type="button" onclick="conditionalsSwitch('Australia');">Australia</button>
+
+      <button type="button" onclick="conditionalsSwitch('USA');">USA</button>
+
+      <button type="button" onclick="conditionalsSwitch('India');">India</button>
+
+      <button type="button" onclick="conditionalsSwitch('IAmCommon');">IAmCommon</button>
+    </div>
+  </body>
+</html>
